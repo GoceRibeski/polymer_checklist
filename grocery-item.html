@@ -1,0 +1,35 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<polymer-element name="grocery-item">
+	<template>
+		<style>
+		:host {
+			display: block;
+			position: relative;
+			background-color: #fff;
+			padding: 20px;
+			width: 50%;
+		}
+		polyfill-next-selector {
+			content: '.item h3';
+		}
+		.item ::content h3 {
+			margin: 0;
+			padding-left: 20px;	
+			font-weight: 300;
+		}
+		</style>
+
+		<div class="item" layout horizontal center>
+			<paper-checkbox></paper-checkbox>
+			<content select="h3"></content>
+		</div>
+		<content></content>
+
+	</template>
+
+	<script>
+	Polymer({});
+	</script>
+
+</polymer-element>

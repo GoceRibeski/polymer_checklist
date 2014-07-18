@@ -18,10 +18,13 @@
 			padding-left: 20px;	
 			font-weight: 300;
 		}
+		:host([purchased]) ::content h3 {
+			text-decoration: line-through;
+		}
 		</style>
 
 		<div class="item" layout horizontal center>
-			<paper-checkbox></paper-checkbox>
+			<paper-checkbox on-tap="{{purchasedTapped}}" hidden?="{{show == 'purchased'}}"></paper-checkbox>
 			<content select="h3"></content>
 		</div>
 		<content></content>
@@ -29,7 +32,18 @@
 	</template>
 
 	<script>
-	Polymer({});
+	Polymer('grocery-item', {
+		publish: {
+			purchased: {
+				value: false,
+				reflect: true
+			}
+		},
+		purchasedTapped: function(event, detail, sender) {
+			this.purchased = !this.purchased;
+			this.fire('purchased-tap');
+		}
+	});
 	</script>
 
 </polymer-element>

@@ -25,12 +25,18 @@
 		<core-toolbar>
 			<paper-tabs id="tabs" selected="list" valueattr="name" self-end>
 				<paper-tab name="list">GROCERY LIST</paper-tab>
-				<paper-tab name="buy">TO BUY</paper-tab>
-				<paper-tab name="purchased">PURCHASED</paper-tab>
+				<paper-tab name="buy" on-tap="{{showToBuy}}">TO BUY</paper-tab>
+				<paper-tab name="purchased" on-tap="{{showPurchased}}">PURCHASED</paper-tab>
 			</paper-tabs>
 		</core-toolbar>
 
 		<div class="container" show="list" layout vertical center>
+			
+			<div class="main-header">
+				<h2>Grocery List</h2>
+				<p>Using Polymer & Web Components</p>
+			</div>
+
 			<grocery-item>
 				<h3>Bread</h3>
 			</grocery-item>
@@ -40,11 +46,17 @@
 			<grocery-item>
 				<h3>Soup</h3>
 			</grocery-item>
+
 		</div>
 
 	</core-header-panel>
 
 	<script>
+		Polymer('grocery-item', {
+			showPurchased: function(event, detail, sender) {
+				this.show("purchased");
+			}
+		});
 
 		var tabs = document.querySelector('paper-tabs');
 		var list = document.querySelector('div');

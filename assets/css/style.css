@@ -16,7 +16,7 @@ core-header-panel {
 }
 
 core-toolbar {
-  background: #9B90C8;
+  background: #46866f;
   color: #fff;
 }
 
@@ -38,3 +38,21 @@ core-toolbar {
     width: 800px;
   }
 }
+
+.main-header {
+  text-align: center;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+  border-bottom: 1px solid #f47d44;
+}
+
+
+
+
+
+
+
+
+

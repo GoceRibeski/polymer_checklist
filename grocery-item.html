@@ -1,6 +1,6 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 
-<polymer-element name="grocery-item">
+<polymer-element name="grocery-item" attributes="show">
 	<template>
 		<style>
 		:host {
@@ -24,7 +24,7 @@
 		</style>
 
 		<div class="item" layout horizontal center>
-			<paper-checkbox on-tap="{{purchasedTapped}}" hidden?="{{show == 'purchased'}}"></paper-checkbox>
+			<paper-checkbox on-tap="{{purchasedTapped}}"></paper-checkbox>
 			<content select="h3"></content>
 		</div>
 		<content></content>

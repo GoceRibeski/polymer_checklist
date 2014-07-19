@@ -1,6 +1,6 @@
 # Built a basic checklist using Polymer & Web Components
 
-You can view the demo here: http://codepen.io/MeredithU/pen/Iiorg
+You can view the demo here: http://meredithunderell.com/devlab/polymer-checklist/
 
 ## Home Page Screenshot
 
